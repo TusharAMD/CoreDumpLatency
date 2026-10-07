@@ -67,11 +67,32 @@ int main() {
     std::uniform_int_distribution<int> dist(5, 60);
     int target_second = dist(gen);
 
-    log_msg(log_file, "Will loop and randomly dereference nullptr around second: " + std::to_string(target_second));
+    log_msg(log_file, "Will run active CPU computation (NO SLEEP) and randomly dereference nullptr around second: " + std::to_string(target_second));
 
-    for (int sec = 1; sec <= target_second; ++sec) {
-        std::this_thread::sleep_for(std::chrono::seconds(1));
-        log_msg(log_file, "Working... elapsed: " + std::to_string(sec) + "s / " + std::to_string(target_second) + "s");
+    auto start_time = std::chrono::steady_clock::now();
+    int last_logged_second = 0;
+    volatile uint64_t cpu_work_counter = 0;
+
+    // Active CPU busy loop - keeps process in 100% 'R' (Running) state
+    while (true) {
+        // Continuous CPU work (math / hashing) to prevent sleeping
+        for (int i = 0; i < 100000; ++i) {
+            cpu_work_counter += (i * 31ULL) ^ 0x5DEECE66DULL;
+        }
+
+        auto now = std::chrono::steady_clock::now();
+        int elapsed = std::chrono::duration_cast<std::chrono::seconds>(now - start_time).count();
+
+        // Log once per second
+        if (elapsed > last_logged_second) {
+            last_logged_second = elapsed;
+            log_msg(log_file, "Active CPU working... elapsed: " + std::to_string(elapsed) + "s / " + std::to_string(target_second) + "s (ops: " + std::to_string(cpu_work_counter) + ")");
+        }
+
+        // Trigger crash when target second is reached
+        if (elapsed >= target_second) {
+            break;
+        }
     }
 
     log_msg(log_file, ">>> TIME REACHED (" + std::to_string(target_second) + "s)! Dereferencing nullptr NOW! <<<");

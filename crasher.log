@@ -1,19 +1,61 @@
-[21:33:09.455] [CRASHER] Process started (PID: 1620)
-[21:33:09.455] [CRASHER] Allocating 2 GB of dirty RAM...
-[21:33:11.376] [CRASHER] Memory populated successfully in RAM!
-[21:33:11.377] [CRASHER] Will loop and randomly dereference nullptr around second: 14
-[21:33:12.377] [CRASHER] Working... elapsed: 1s / 14s
-[21:33:13.379] [CRASHER] Working... elapsed: 2s / 14s
-[21:33:14.382] [CRASHER] Working... elapsed: 3s / 14s
-[21:33:15.385] [CRASHER] Working... elapsed: 4s / 14s
-[21:33:16.388] [CRASHER] Working... elapsed: 5s / 14s
-[21:33:17.391] [CRASHER] Working... elapsed: 6s / 14s
-[21:33:18.394] [CRASHER] Working... elapsed: 7s / 14s
-[21:33:19.397] [CRASHER] Working... elapsed: 8s / 14s
-[21:33:20.400] [CRASHER] Working... elapsed: 9s / 14s
-[21:33:21.403] [CRASHER] Working... elapsed: 10s / 14s
-[21:33:22.405] [CRASHER] Working... elapsed: 11s / 14s
-[21:33:23.408] [CRASHER] Working... elapsed: 12s / 14s
-[21:33:24.411] [CRASHER] Working... elapsed: 13s / 14s
-[21:33:25.414] [CRASHER] Working... elapsed: 14s / 14s
-[21:33:25.415] [CRASHER] >>> TIME REACHED (14s)! Dereferencing nullptr NOW! <<<
+[21:58:14.587] [CRASHER] Process started (PID: 1684)
+[21:58:14.588] [CRASHER] Allocating 2 GB of dirty RAM...
+[21:58:16.451] [CRASHER] Memory populated successfully in RAM!
+[21:58:16.452] [CRASHER] Will run active CPU computation (NO SLEEP) and randomly dereference nullptr around second: 56
+[21:58:17.453] [CRASHER] Active CPU working... elapsed: 1s / 56s (ops: 18403890960685369392)
+[21:58:18.453] [CRASHER] Active CPU working... elapsed: 2s / 56s (ops: 582471757864722672)
+[21:58:19.453] [CRASHER] Active CPU working... elapsed: 3s / 56s (ops: 1313696535637965904)
+[21:58:20.453] [CRASHER] Active CPU working... elapsed: 4s / 56s (ops: 1795300104326697344)
+[21:58:21.453] [CRASHER] Active CPU working... elapsed: 5s / 56s (ops: 2372717874482211088)
+[21:58:22.453] [CRASHER] Active CPU working... elapsed: 6s / 56s (ops: 2566878838770595616)
+[21:58:23.453] [CRASHER] Active CPU working... elapsed: 7s / 56s (ops: 2645054190757085776)
+[21:58:24.453] [CRASHER] Active CPU working... elapsed: 8s / 56s (ops: 3260293356228434640)
+[21:58:25.453] [CRASHER] Active CPU working... elapsed: 9s / 56s (ops: 3968825296812176800)
+[21:58:26.453] [CRASHER] Active CPU working... elapsed: 10s / 56s (ops: 4435300307374574192)
+[21:58:27.453] [CRASHER] Active CPU working... elapsed: 11s / 56s (ops: 3976411845876205648)
+[21:58:28.453] [CRASHER] Active CPU working... elapsed: 12s / 56s (ops: 4349594081326209744)
+[21:58:29.453] [CRASHER] Active CPU working... elapsed: 13s / 56s (ops: 5027868905657283808)
+[21:58:30.453] [CRASHER] Active CPU working... elapsed: 14s / 56s (ops: 5663279481963744736)
+[21:58:31.453] [CRASHER] Active CPU working... elapsed: 15s / 56s (ops: 6371811422547486896)
+[21:58:32.453] [CRASHER] Active CPU working... elapsed: 16s / 56s (ops: 6992093440727613776)
+[21:58:33.453] [CRASHER] Active CPU working... elapsed: 17s / 56s (ops: 7693061102248188912)
+[21:58:34.453] [CRASHER] Active CPU working... elapsed: 18s / 56s (ops: 8394028763768764048)
+[21:58:35.453] [CRASHER] Active CPU working... elapsed: 19s / 56s (ops: 9039525045492781008)
+[21:58:36.453] [CRASHER] Active CPU working... elapsed: 20s / 56s (ops: 9664849916381685904)
+[21:58:37.453] [CRASHER] Active CPU working... elapsed: 21s / 56s (ops: 10343124740712759968)
+[21:58:38.453] [CRASHER] Active CPU working... elapsed: 22s / 56s (ops: 11026442417752612048)
+[21:58:39.453] [CRASHER] Active CPU working... elapsed: 23s / 56s (ops: 11112182048802269232)
+[21:58:40.453] [CRASHER] Active CPU working... elapsed: 24s / 56s (ops: 11780371167715787264)
+[21:58:41.453] [CRASHER] Active CPU working... elapsed: 25s / 56s (ops: 12433431728502971248)
+[21:58:42.453] [CRASHER] Active CPU working... elapsed: 26s / 56s (ops: 13020935204076041024)
+[21:58:43.453] [CRASHER] Active CPU working... elapsed: 27s / 56s (ops: 13694167175698337072)
+[21:58:44.453] [CRASHER] Active CPU working... elapsed: 28s / 56s (ops: 14417827674408413280)
+[21:58:45.453] [CRASHER] Active CPU working... elapsed: 29s / 56s (ops: 15088538219676320320)
+[21:58:46.453] [CRASHER] Active CPU working... elapsed: 30s / 56s (ops: 15812198718386396528)
+[21:58:47.453] [CRASHER] Active CPU working... elapsed: 31s / 56s (ops: 16364402224998020192)
+[21:58:48.453] [CRASHER] Active CPU working... elapsed: 32s / 56s (ops: 15176821547081228336)
+[21:58:49.453] [CRASHER] Active CPU working... elapsed: 33s / 56s (ops: 15812232123387689264)
+[21:58:50.453] [CRASHER] Active CPU working... elapsed: 34s / 56s (ops: 16515721211262653408)
+[21:58:51.453] [CRASHER] Active CPU working... elapsed: 35s / 56s (ops: 17246945989035896640)
+[21:58:52.453] [CRASHER] Active CPU working... elapsed: 36s / 56s (ops: 17930263666075748720)
+[21:58:53.453] [CRASHER] Active CPU working... elapsed: 37s / 56s (ops: 144144432216548112)
+[21:58:54.453] [CRASHER] Active CPU working... elapsed: 38s / 56s (ops: 872847783635402336)
+[21:58:55.453] [CRASHER] Active CPU working... elapsed: 39s / 56s (ops: 1604072561408645568)
+[21:58:56.453] [CRASHER] Active CPU working... elapsed: 40s / 56s (ops: 2264697401258996576)
+[21:58:57.453] [CRASHER] Active CPU working... elapsed: 41s / 56s (ops: 2948015078298848656)
+[21:58:58.453] [CRASHER] Active CPU working... elapsed: 42s / 56s (ops: 3643939887110645776)
+[21:58:59.453] [CRASHER] Active CPU working... elapsed: 43s / 56s (ops: 4443243176452392224)
+[21:59:00.453] [CRASHER] Active CPU working... elapsed: 44s / 56s (ops: 5159339396099301408)
+[21:59:01.453] [CRASHER] Active CPU working... elapsed: 45s / 56s (ops: 5794749972405762336)
+[21:59:02.453] [CRASHER] Active CPU working... elapsed: 46s / 56s (ops: 6384774874333221120)
+[21:59:03.453] [CRASHER] Active CPU working... elapsed: 47s / 56s (ops: 7042878287829183120)
+[21:59:04.453] [CRASHER] Active CPU working... elapsed: 48s / 56s (ops: 7645510321528586944)
+[21:59:05.453] [CRASHER] Active CPU working... elapsed: 49s / 56s (ops: 8321263719505272000)
+[21:59:06.453] [CRASHER] Active CPU working... elapsed: 50s / 56s (ops: 8891117210597618720)
+[21:59:07.453] [CRASHER] Active CPU working... elapsed: 51s / 56s (ops: 9566870608574303776)
+[21:59:08.453] [CRASHER] Active CPU working... elapsed: 52s / 56s (ops: 10184631200400041648)
+[21:59:09.453] [CRASHER] Active CPU working... elapsed: 53s / 56s (ops: 10825084629415280592)
+[21:59:10.453] [CRASHER] Active CPU working... elapsed: 54s / 56s (ops: 11508402306455132672)
+[21:59:11.453] [CRASHER] Active CPU working... elapsed: 55s / 56s (ops: 12153898588179149632)
+[21:59:12.453] [CRASHER] Active CPU working... elapsed: 56s / 56s (ops: 12814523428029500640)
+[21:59:12.454] [CRASHER] >>> TIME REACHED (56s)! Dereferencing nullptr NOW! <<<

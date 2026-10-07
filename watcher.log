@@ -1,80 +1,180 @@
-[21:33:09.446] ======================================================
-[21:33:09.446] [WATCHER] Starting watcher process (PID: 1619)
-[21:33:09.447] [WATCHER] Press Ctrl+C anytime to stop this watcher.
-[21:33:09.448] ======================================================
-[21:33:09.449] [WATCHER] Spawned child crasher PID: 1620
-[21:33:09.450] [WATCHER] Calling waitpid(1620)... (blocked until kernel finishes exit)
-[21:33:09.451] [MONITOR] PID 1620 State: R (R: Running/CPU work or kernel dump in memory) | Core file: Not created yet
-[21:33:09.951] [MONITOR] PID 1620 State: R (R: Running/CPU work or kernel dump in memory) | Core file: Not created yet
-[21:33:10.453] [MONITOR] PID 1620 State: R (R: Running/CPU work or kernel dump in memory) | Core file: Not created yet
-[21:33:10.954] [MONITOR] PID 1620 State: R (R: Running/CPU work or kernel dump in memory) | Core file: Not created yet
-[21:33:11.455] [MONITOR] PID 1620 State: S (S: Sleeping / nanosleep timer) | Core file: Not created yet
-[21:33:11.958] [MONITOR] PID 1620 State: S (S: Sleeping / nanosleep timer) | Core file: Not created yet
-[21:33:12.460] [MONITOR] PID 1620 State: S (S: Sleeping / nanosleep timer) | Core file: Not created yet
-[21:33:12.962] [MONITOR] PID 1620 State: S (S: Sleeping / nanosleep timer) | Core file: Not created yet
-[21:33:13.465] [MONITOR] PID 1620 State: S (S: Sleeping / nanosleep timer) | Core file: Not created yet
-[21:33:13.966] [MONITOR] PID 1620 State: S (S: Sleeping / nanosleep timer) | Core file: Not created yet
-[21:33:14.470] [MONITOR] PID 1620 State: S (S: Sleeping / nanosleep timer) | Core file: Not created yet
-[21:33:14.971] [MONITOR] PID 1620 State: S (S: Sleeping / nanosleep timer) | Core file: Not created yet
-[21:33:15.473] [MONITOR] PID 1620 State: S (S: Sleeping / nanosleep timer) | Core file: Not created yet
-[21:33:15.975] [MONITOR] PID 1620 State: S (S: Sleeping / nanosleep timer) | Core file: Not created yet
-[21:33:16.477] [MONITOR] PID 1620 State: S (S: Sleeping / nanosleep timer) | Core file: Not created yet
-[21:33:16.979] [MONITOR] PID 1620 State: S (S: Sleeping / nanosleep timer) | Core file: Not created yet
-[21:33:17.481] [MONITOR] PID 1620 State: S (S: Sleeping / nanosleep timer) | Core file: Not created yet
-[21:33:17.984] [MONITOR] PID 1620 State: S (S: Sleeping / nanosleep timer) | Core file: Not created yet
-[21:33:18.486] [MONITOR] PID 1620 State: S (S: Sleeping / nanosleep timer) | Core file: Not created yet
-[21:33:18.990] [MONITOR] PID 1620 State: S (S: Sleeping / nanosleep timer) | Core file: Not created yet
-[21:33:19.493] [MONITOR] PID 1620 State: S (S: Sleeping / nanosleep timer) | Core file: Not created yet
-[21:33:19.994] [MONITOR] PID 1620 State: S (S: Sleeping / nanosleep timer) | Core file: Not created yet
-[21:33:20.497] [MONITOR] PID 1620 State: S (S: Sleeping / nanosleep timer) | Core file: Not created yet
-[21:33:21.000] [MONITOR] PID 1620 State: S (S: Sleeping / nanosleep timer) | Core file: Not created yet
-[21:33:21.501] [MONITOR] PID 1620 State: S (S: Sleeping / nanosleep timer) | Core file: Not created yet
-[21:33:22.004] [MONITOR] PID 1620 State: S (S: Sleeping / nanosleep timer) | Core file: Not created yet
-[21:33:22.507] [MONITOR] PID 1620 State: S (S: Sleeping / nanosleep timer) | Core file: Not created yet
-[21:33:23.010] [MONITOR] PID 1620 State: S (S: Sleeping / nanosleep timer) | Core file: Not created yet
-[21:33:23.512] [MONITOR] PID 1620 State: S (S: Sleeping / nanosleep timer) | Core file: Not created yet
-[21:33:24.015] [MONITOR] PID 1620 State: S (S: Sleeping / nanosleep timer) | Core file: Not created yet
-[21:33:24.517] [MONITOR] PID 1620 State: S (S: Sleeping / nanosleep timer) | Core file: Not created yet
-[21:33:25.019] [MONITOR] PID 1620 State: S (S: Sleeping / nanosleep timer) | Core file: Not created yet
-[21:33:25.521] [MONITOR] PID 1620 State: R (R: Running/CPU work or kernel dump in memory) | Core file: Found (83 MB, Last-Modified: 21:33:25)
-[21:33:26.022] [MONITOR] PID 1620 State: D (D: Disk I/O uninterruptible sleep) | Core file: Found (347 MB, Last-Modified: 21:33:25)
-[21:33:26.523] [MONITOR] PID 1620 State: D (D: Disk I/O uninterruptible sleep) | Core file: Found (415 MB, Last-Modified: 21:33:26)
-[21:33:27.025] [MONITOR] PID 1620 State: D (D: Disk I/O uninterruptible sleep) | Core file: Found (453 MB, Last-Modified: 21:33:26)
-[21:33:27.527] [MONITOR] PID 1620 State: D (D: Disk I/O uninterruptible sleep) | Core file: Found (550 MB, Last-Modified: 21:33:27)
-[21:33:28.028] [MONITOR] PID 1620 State: D (D: Disk I/O uninterruptible sleep) | Core file: Found (550 MB, Last-Modified: 21:33:27)
-[21:33:28.530] [MONITOR] PID 1620 State: D (D: Disk I/O uninterruptible sleep) | Core file: Found (550 MB, Last-Modified: 21:33:27)
-[21:33:29.033] [MONITOR] PID 1620 State: D (D: Disk I/O uninterruptible sleep) | Core file: Found (550 MB, Last-Modified: 21:33:27)
-[21:33:29.535] [MONITOR] PID 1620 State: D (D: Disk I/O uninterruptible sleep) | Core file: Found (550 MB, Last-Modified: 21:33:27)
-[21:33:30.037] [MONITOR] PID 1620 State: R (R: Running/CPU work or kernel dump in memory) | Core file: Found (710 MB, Last-Modified: 21:33:30)
-[21:33:30.538] [MONITOR] PID 1620 State: R (R: Running/CPU work or kernel dump in memory) | Core file: Found (810 MB, Last-Modified: 21:33:30)
-[21:33:31.040] [MONITOR] PID 1620 State: R (R: Running/CPU work or kernel dump in memory) | Core file: Found (871 MB, Last-Modified: 21:33:31)
-[21:33:31.540] [MONITOR] PID 1620 State: R (R: Running/CPU work or kernel dump in memory) | Core file: Found (961 MB, Last-Modified: 21:33:31)
-[21:33:32.041] [MONITOR] PID 1620 State: R (R: Running/CPU work or kernel dump in memory) | Core file: Found (1055 MB, Last-Modified: 21:33:32)
-[21:33:32.543] [MONITOR] PID 1620 State: R (R: Running/CPU work or kernel dump in memory) | Core file: Found (1142 MB, Last-Modified: 21:33:32)
-[21:33:33.044] [MONITOR] PID 1620 State: R (R: Running/CPU work or kernel dump in memory) | Core file: Found (1207 MB, Last-Modified: 21:33:33)
-[21:33:33.679] [MONITOR] PID 1620 State: R (R: Running/CPU work or kernel dump in memory) | Core file: Found (1240 MB, Last-Modified: 21:33:33)
-[21:33:34.180] [MONITOR] PID 1620 State: R (R: Running/CPU work or kernel dump in memory) | Core file: Found (1257 MB, Last-Modified: 21:33:33)
-[21:33:34.682] [MONITOR] PID 1620 State: R (R: Running/CPU work or kernel dump in memory) | Core file: Found (1285 MB, Last-Modified: 21:33:34)
-[21:33:35.183] [MONITOR] PID 1620 State: R (R: Running/CPU work or kernel dump in memory) | Core file: Found (1411 MB, Last-Modified: 21:33:35)
-[21:33:35.720] [MONITOR] PID 1620 State: D (D: Disk I/O uninterruptible sleep) | Core file: Found (1488 MB, Last-Modified: 21:33:35)
-[21:33:36.221] [MONITOR] PID 1620 State: R (R: Running/CPU work or kernel dump in memory) | Core file: Found (1565 MB, Last-Modified: 21:33:36)
-[21:33:36.723] [MONITOR] PID 1620 State: R (R: Running/CPU work or kernel dump in memory) | Core file: Found (1633 MB, Last-Modified: 21:33:36)
-[21:33:37.354] [MONITOR] PID 1620 State: R (R: Running/CPU work or kernel dump in memory) | Core file: Found (1706 MB, Last-Modified: 21:33:37)
-[21:33:37.855] [MONITOR] PID 1620 State: R (R: Running/CPU work or kernel dump in memory) | Core file: Found (1820 MB, Last-Modified: 21:33:37)
-[21:33:38.356] [MONITOR] PID 1620 State: R (R: Running/CPU work or kernel dump in memory) | Core file: Found (1896 MB, Last-Modified: 21:33:38)
-[21:33:38.857] [MONITOR] PID 1620 State: R (R: Running/CPU work or kernel dump in memory) | Core file: Found (1959 MB, Last-Modified: 21:33:38)
-[21:33:39.358] [MONITOR] PID 1620 State: R (R: Running/CPU work or kernel dump in memory) | Core file: Found (1990 MB, Last-Modified: 21:33:39)
-[21:33:39.860] [MONITOR] PID 1620 State: R (R: Running/CPU work or kernel dump in memory) | Core file: Found (2037 MB, Last-Modified: 21:33:39)
-[21:33:40.362] [MONITOR] PID 1620 State: R (R: Running/CPU work or kernel dump in memory) | Core file: Found (2048 MB, Last-Modified: 21:33:40)
-[21:33:40.870] [MONITOR] PID 1620 State: DEAD/NOT_FOUND (Terminated / cleaned up) | Core file: Found (2053 MB, Last-Modified: 21:33:40)
-[21:33:40.884] 
-======================================================
-[21:33:40.886] [WATCHER] waitpid() RETURNED! Process officially recognized as DEAD at: [21:33:40.886]
-[21:33:40.888] [WATCHER] waitpid() blocked for total of: 31430 ms (31.430000 seconds)
-[21:33:40.889] [WATCHER] Child terminated by signal: 11 (Segmentation fault)
-[21:33:40.890] [WATCHER] Was core dump completed according to kernel? YES (WCOREDUMP=true)
-[21:33:40.892] [WATCHER] Core file path: /tmp/core.huge_crasher.1620
-[21:33:40.893] [WATCHER] Core file size: 2153529344 bytes (2053 MB)
-[21:33:40.894] [WATCHER] Core file last modified timestamp: [21:33:40]
-[21:33:40.903] ======================================================
-[21:33:41.379] [WATCHER] Watcher is idle and staying alive as requested. Press Ctrl+C to exit.
+[21:58:14.578] ==========================================================================
+[21:58:14.578] [WATCHER] Starting watcher process (PID: 1683)
+[21:58:14.579] [WATCHER] Ensures RLIMIT_CORE = unlimited automatically.
+[21:58:14.580] ==========================================================================
+[21:58:14.580] [WATCHER] Spawned child crasher PID: 1684
+[21:58:14.581] [WATCHER] Calling waitpid(1684)... (blocked)
+[21:58:14.581] [WATCHER] Calling waitpid(1684)... (blocked)
+[21:58:14.582] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Not created yet
+[21:58:15.083] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:15.584] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:16.086] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:16.587] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:17.088] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:17.589] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:18.091] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:18.592] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:19.093] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:19.594] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:20.095] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:20.596] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:21.097] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:21.598] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:22.100] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:22.601] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:23.102] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:23.603] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:24.104] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:24.605] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:25.106] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:25.607] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:26.108] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:26.609] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:27.111] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:27.613] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:28.115] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:28.617] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:29.118] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:29.619] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:30.120] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:30.621] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:31.122] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:31.624] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:32.125] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:32.626] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:33.127] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:33.629] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:34.130] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:34.631] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:35.132] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:35.633] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:36.134] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:36.636] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:37.137] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:37.638] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:38.139] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:38.640] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:39.141] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:39.642] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:40.143] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:40.644] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:41.146] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:41.647] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:42.148] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:42.649] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:43.150] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:43.652] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:44.153] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:44.654] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:45.155] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:45.656] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:46.157] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:46.659] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:47.160] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:47.661] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:48.162] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:48.663] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:49.164] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:49.665] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:50.166] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:50.667] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:51.168] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:51.670] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:52.171] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:52.672] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:53.173] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:53.674] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:54.175] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:54.676] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:55.177] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:55.678] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:56.180] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:56.681] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:57.182] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:57.683] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:58.184] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:58.685] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:59.187] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:58:59.688] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:59:00.189] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:59:00.690] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:59:01.191] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:59:01.692] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:59:02.193] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:59:02.695] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:59:03.196] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:59:03.697] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:59:04.198] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:59:04.699] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:59:05.200] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:59:05.701] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:59:06.202] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:59:06.703] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:59:07.205] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:59:07.706] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:59:08.207] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:59:08.708] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:59:09.209] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:59:09.710] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:59:10.212] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:59:10.713] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:59:11.214] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:59:11.715] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:59:12.216] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
+[21:59:12.717] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Found (187 MB)
+[21:59:13.218] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Found (385 MB)
+[21:59:13.720] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (462 MB)
+[21:59:14.221] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (502 MB)
+[21:59:14.724] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Found (542 MB)
+[21:59:15.226] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (580 MB)
+[21:59:15.729] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (625 MB)
+[21:59:16.231] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (672 MB)
+[21:59:16.732] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (758 MB)
+[21:59:17.233] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (790 MB)
+[21:59:17.735] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (821 MB)
+[21:59:18.236] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Found (839 MB)
+[21:59:18.738] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (908 MB)
+[21:59:19.240] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (990 MB)
+[21:59:19.742] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (1045 MB)
+[21:59:20.244] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Found (1076 MB)
+[21:59:20.746] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (1099 MB)
+[21:59:21.247] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (1134 MB)
+[21:59:21.748] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (1215 MB)
+[21:59:22.250] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (1308 MB)
+[21:59:22.752] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (1356 MB)
+[21:59:23.253] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (1440 MB)
+[21:59:23.755] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (1486 MB)
+[21:59:24.256] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Found (1512 MB)
+[21:59:24.758] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (1558 MB)
+[21:59:25.266] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (1654 MB)
+[21:59:25.767] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (1747 MB)
+[21:59:26.269] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Found (1799 MB)
+[21:59:26.770] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (1832 MB)
+[21:59:27.272] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (1853 MB)
+[21:59:27.773] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (1907 MB)
+[21:59:28.274] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (2002 MB)
+[21:59:28.776] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Found (2048 MB)
+[21:59:29.277] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Found (2049 MB)
+[21:59:29.961] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (2050 MB)
+[21:59:30.462] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Found (2053 MB)
+[21:59:30.963] 
++=========================================================================================+
+|                             PROCESS LIFECYCLE SUMMARY TABLE                             |
++=========================================================================================+
+| Metric / Event                       | Timestamp / Value                                |
++--------------------------------------+--------------------------------------------------+
+| 1. Child Process Spawned             | 21:58:14.581 (PID: 1684)                         |
+| 2. Crash Occurred (Core Started)     | 21:59:12.717 (First size: 187 MB)                |
+| 3. Watcher Notified of Death         | 21:59:30.676 (via waitpid)                       |
++--------------------------------------+--------------------------------------------------+
+| 4. Time Spent Dumping Core to Disk   | 17.958 seconds (Lag/Delay)                       |
+| 5. Total Process Lifetime            | 76.094 seconds                                   |
++--------------------------------------+--------------------------------------------------+
+| 6. Termination Signal                | SIG 11 (Segmentation fault)                      |
+| 7. Kernel Core Dump Flag             | YES (WCOREDUMP=true)                             |
+| 8. Final Core File Path              | /tmp/core.huge_crasher.1684                      |
+| 9. Final Core File Size              | 2053 MB (2153529344 bytes)                       |
++=========================================================================================+
+
+[21:59:30.965] [WATCHER] Watcher is idle and staying alive as requested. Press Ctrl+C to exit.
+[22:05:09.084] [WATCHER] Received Ctrl+C / SIGINT. Exiting watcher now. Goodbye!
