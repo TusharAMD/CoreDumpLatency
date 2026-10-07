@@ -4,37 +4,62 @@
 #include <chrono>
 #include <thread>
 #include <random>
+#include <fstream>
+#include <iomanip>
 #include <unistd.h>
 
-// Allocate 6 GB of dirty memory
-const size_t ALLOC_SIZE = 6ULL * 1024ULL * 1024ULL * 1024ULL; // 6 GB
+// Helper function to get current timestamp with milliseconds: HH:MM:SS.mmm
+std::string get_timestamp() {
+    auto now = std::chrono::system_clock::now();
+    auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch()) % 1000;
+    std::time_t t = std::chrono::system_clock::to_time_t(now);
+    std::tm tm_buf;
+    localtime_r(&t, &tm_buf);
+
+    std::ostringstream oss;
+    oss << std::put_time(&tm_buf, "%H:%M:%S") << "." << std::setfill('0') << std::setw(3) << ms.count();
+    return oss.str();
+}
+
+void log_msg(std::ofstream& log_file, const std::string& msg) {
+    std::string timestamped = "[" + get_timestamp() + "] [CRASHER] " + msg;
+    std::cout << timestamped << std::endl;
+    if (log_file.is_open()) {
+        log_file << timestamped << std::endl;
+        log_file.flush();
+    }
+}
+
+// 2 GB allocation
+const size_t ALLOC_SIZE = 2ULL * 1024ULL * 1024ULL * 1024ULL;
 
 int main() {
-    // Tell the kernel to dump EVERYTHING in this process: anonymous, shared, file-backed (mask 0x3f)
+    std::ofstream log_file("crasher.log", std::ios::out | std::ios::trunc);
+
+    // Tell Linux kernel to dump all memory mappings (anonymous, file, shared)
     FILE* fp = fopen("/proc/self/coredump_filter", "w");
     if (fp) {
         fprintf(fp, "0x3f\n");
         fclose(fp);
     }
 
-    std::cout << "[CRASHER (PID " << getpid() << ")] Allocating 6 GB of dirty RAM..." << std::endl;
-    
+    log_msg(log_file, "Process started (PID: " + std::to_string(getpid()) + ")");
+    log_msg(log_file, "Allocating 2 GB of dirty RAM...");
+
     char* buffer = nullptr;
     try {
         buffer = new char[ALLOC_SIZE];
-        // Write distinct values across every 4KB page so memory is genuinely dirty & non-zero
+        // Populate pages so they are non-zero and physically backed in RAM
         for (size_t i = 0; i < ALLOC_SIZE; i += 4096) {
             buffer[i] = (char)(i & 0xFF);
             buffer[i + 1] = 0x55;
         }
-    } catch (const std::bad_alloc& e) {
-        std::cerr << "Failed to allocate 4 GB, trying 2 GB..." << std::endl;
-        size_t fallback_size = 2ULL * 1024ULL * 1024ULL * 1024ULL;
-        buffer = new char[fallback_size];
-        std::memset(buffer, 0xAA, fallback_size);
+    } catch (const std::exception& e) {
+        log_msg(log_file, std::string("Allocation failed: ") + e.what());
+        return 1;
     }
 
-    std::cout << "[CRASHER] Memory populated successfully in RAM!" << std::endl;
+    log_msg(log_file, "Memory populated successfully in RAM!");
 
     // Random crash time between 5 and 60 seconds
     std::random_device rd;
@@ -42,20 +67,18 @@ int main() {
     std::uniform_int_distribution<int> dist(5, 60);
     int target_second = dist(gen);
 
-    std::cout << "[CRASHER] Will loop and randomly dereference nullptr around second: " << target_second << std::endl;
+    log_msg(log_file, "Will loop and randomly dereference nullptr around second: " + std::to_string(target_second));
 
-    auto start_time = std::chrono::steady_clock::now();
     for (int sec = 1; sec <= target_second; ++sec) {
         std::this_thread::sleep_for(std::chrono::seconds(1));
-        std::cout << "[CRASHER] Working... elapsed: " << sec << "s / " << target_second << "s" << std::endl;
+        log_msg(log_file, "Working... elapsed: " + std::to_string(sec) + "s / " + std::to_string(target_second) + "s");
     }
 
-    std::cout << "\n>>> [CRASHER] TIME REACHED (" << target_second 
-              << "s)! Dereferencing nullptr to trigger core dump... <<<" << std::endl;
-    std::cout.flush();
+    log_msg(log_file, ">>> TIME REACHED (" + std::to_string(target_second) + "s)! Dereferencing nullptr NOW! <<<");
 
+    // Null pointer dereference
     volatile int* ptr = nullptr;
-    *ptr = 1234; // Segfault triggers kernel do_coredump() here
+    *ptr = 1234; // Segfault & kernel do_coredump() triggered here
 
     return 0;
 }

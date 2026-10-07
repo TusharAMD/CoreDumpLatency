@@ -1,0 +1,19 @@
+[21:33:09.455] [CRASHER] Process started (PID: 1620)
+[21:33:09.455] [CRASHER] Allocating 2 GB of dirty RAM...
+[21:33:11.376] [CRASHER] Memory populated successfully in RAM!
+[21:33:11.377] [CRASHER] Will loop and randomly dereference nullptr around second: 14
+[21:33:12.377] [CRASHER] Working... elapsed: 1s / 14s
+[21:33:13.379] [CRASHER] Working... elapsed: 2s / 14s
+[21:33:14.382] [CRASHER] Working... elapsed: 3s / 14s
+[21:33:15.385] [CRASHER] Working... elapsed: 4s / 14s
+[21:33:16.388] [CRASHER] Working... elapsed: 5s / 14s
+[21:33:17.391] [CRASHER] Working... elapsed: 6s / 14s
+[21:33:18.394] [CRASHER] Working... elapsed: 7s / 14s
+[21:33:19.397] [CRASHER] Working... elapsed: 8s / 14s
+[21:33:20.400] [CRASHER] Working... elapsed: 9s / 14s
+[21:33:21.403] [CRASHER] Working... elapsed: 10s / 14s
+[21:33:22.405] [CRASHER] Working... elapsed: 11s / 14s
+[21:33:23.408] [CRASHER] Working... elapsed: 12s / 14s
+[21:33:24.411] [CRASHER] Working... elapsed: 13s / 14s
+[21:33:25.414] [CRASHER] Working... elapsed: 14s / 14s
+[21:33:25.415] [CRASHER] >>> TIME REACHED (14s)! Dereferencing nullptr NOW! <<<
