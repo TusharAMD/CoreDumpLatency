@@ -14,13 +14,11 @@
 #include <atomic>
 #include <csignal>
 
-// Helper to get formatted timestamp HH:MM:SS.mmm
 std::string get_timestamp(std::chrono::system_clock::time_point tp) {
     auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(tp.time_since_epoch()) % 1000;
     std::time_t t = std::chrono::system_clock::to_time_t(tp);
     std::tm tm_buf;
     localtime_r(&t, &tm_buf);
-
     std::ostringstream oss;
     oss << std::put_time(&tm_buf, "%H:%M:%S") << "." << std::setfill('0') << std::setw(3) << ms.count();
     return oss.str();
@@ -39,28 +37,22 @@ void log_msg(std::ofstream& log_file, const std::string& msg) {
     }
 }
 
-// Read process state from /proc/<pid>/stat
 std::string get_process_state(pid_t pid) {
     std::string path = "/proc/" + std::to_string(pid) + "/stat";
     std::ifstream file(path);
     if (!file.is_open()) return "DEAD/NOT_FOUND";
-
     int p;
-    std::string comm;
-    std::string state;
-    if (file >> p >> comm >> state) {
-        return state;
-    }
+    std::string comm, state;
+    if (file >> p >> comm >> state) return state;
     return "UNKNOWN";
 }
 
-// Check core file existence, size, and mtime
-bool check_core(pid_t pid, off_t& out_size, std::chrono::system_clock::time_point& out_tp) {
-    std::string core_path = "/tmp/core.huge_crasher." + std::to_string(pid);
+bool check_core_location(const std::string& dir, pid_t pid, off_t& out_size, std::string& out_path) {
+    std::string path = dir + "/core.huge_crasher." + std::to_string(pid);
     struct stat st;
-    if (stat(core_path.c_str(), &st) == 0) {
+    if (stat(path.c_str(), &st) == 0) {
         out_size = st.st_size;
-        out_tp = std::chrono::system_clock::from_time_t(st.st_mtime);
+        out_path = path;
         return true;
     }
     return false;
@@ -69,10 +61,31 @@ bool check_core(pid_t pid, off_t& out_size, std::chrono::system_clock::time_poin
 std::atomic<bool> keep_running{true};
 void sigint_handler(int) { keep_running = false; }
 
-int main() {
+int main(int argc, char* argv[]) {
     std::signal(SIGINT, sigint_handler);
 
-    // Guarantee core dumps are enabled for this process tree
+    // Optional argument: "disk" (default: /tmp) or "ram" (/dev/shm)
+    std::string mode = "disk";
+    std::string core_dir = "/tmp";
+    std::string mem_gb = "0.2"; // default 200 MB
+
+    if (argc > 1) {
+        std::string arg = argv[1];
+        if (arg == "ram" || arg == "shm") {
+            mode = "ram";
+            core_dir = "/dev/shm";
+        } else if (arg == "disk") {
+            mode = "disk";
+            core_dir = "/tmp";
+        } else {
+            core_dir = arg;
+        }
+    }
+
+    if (argc > 2) {
+        mem_gb = argv[2]; // e.g. 1, 0.5, 0.2
+    }
+
     struct rlimit rl;
     rl.rlim_cur = RLIM_INFINITY;
     rl.rlim_max = RLIM_INFINITY;
@@ -81,45 +94,54 @@ int main() {
     std::ofstream watcher_log("watcher.log", std::ios::out | std::ios::trunc);
 
     log_msg(watcher_log, "==========================================================================");
-    log_msg(watcher_log, "[WATCHER] Starting watcher process (PID: " + std::to_string(getpid()) + ")");
-    log_msg(watcher_log, "[WATCHER] Ensures RLIMIT_CORE = unlimited automatically.");
+    log_msg(watcher_log, "[WATCHER] Mode: " + mode + " | Target Memory: " + mem_gb + " GB | Core Dir: " + core_dir);
     log_msg(watcher_log, "==========================================================================");
 
-    pid_t child_pid = fork();
+    int crash_pipe[2];
+    if (pipe(crash_pipe) < 0) perror("pipe failed");
 
+    pid_t child_pid = fork();
     if (child_pid == 0) {
-        char* args[] = { (char*)"./huge_crasher", nullptr };
+        // Child: set write-end of pipe to FD 3
+        close(crash_pipe[0]);
+        dup2(crash_pipe[1], 3);
+        close(crash_pipe[1]);
+
+        char* args[] = { (char*)"./huge_crasher", (char*)mem_gb.c_str(), nullptr };
         execv("./huge_crasher", args);
         perror("execv failed");
         _exit(1);
     }
 
+    close(crash_pipe[1]); // Close write end in parent
     log_msg(watcher_log, "[WATCHER] Spawned child crasher PID: " + std::to_string(child_pid));
 
-    // Variables for event timing
     std::atomic<bool> child_exited{false};
-    std::atomic<bool> core_detected{false};
+    std::atomic<bool> crash_occurred{false};
     std::chrono::system_clock::time_point t_spawn = std::chrono::system_clock::now();
-    std::chrono::system_clock::time_point t_core_first_seen;
-    off_t first_seen_size = 0;
+    std::chrono::system_clock::time_point t_crash_exact;
 
-    // Monitor thread to spot the exact millisecond the core dump begins
+    // Thread 1: listen for the exact crash byte from child
+    std::thread crash_listener([&]() {
+        char buf;
+        if (read(crash_pipe[0], &buf, 1) > 0) {
+            t_crash_exact = std::chrono::system_clock::now();
+            crash_occurred = true;
+        }
+        close(crash_pipe[0]);
+    });
+
+    // Thread 2: monitor process states
     std::thread monitor([&]() {
         while (!child_exited && keep_running) {
             std::string state = get_process_state(child_pid);
             off_t current_core_size = 0;
-            std::chrono::system_clock::time_point mtime;
-            bool exists = check_core(child_pid, current_core_size, mtime);
-
-            if (exists && !core_detected) {
-                core_detected = true;
-                t_core_first_seen = std::chrono::system_clock::now();
-                first_seen_size = current_core_size;
-            }
+            std::string path_found;
+            bool exists = check_core_location(core_dir, child_pid, current_core_size, path_found);
 
             std::string desc = "(?)";
-            if (state == "R") desc = "(R: Running / CPU work or Kernel dumping memory)";
-            else if (state == "S") desc = "(S: Sleeping / nanosleep)";
+            if (state == "R") desc = "(R: Running / CPU work or Memory write)";
+            else if (state == "S") desc = "(S: Sleeping)";
             else if (state == "D") desc = "(D: Disk I/O Uninterruptible Sleep)";
             else if (state == "DEAD/NOT_FOUND") desc = "(Cleaned up / gone)";
 
@@ -129,7 +151,7 @@ int main() {
             log_msg(watcher_log, "[MONITOR] PID " + std::to_string(child_pid) + " State: " + state + 
                                  " " + desc + " | Core: " + core_info);
 
-            std::this_thread::sleep_for(std::chrono::milliseconds(500));
+            std::this_thread::sleep_for(std::chrono::milliseconds(200));
         }
     });
 
@@ -140,42 +162,38 @@ int main() {
     std::chrono::system_clock::time_point t_waitpid_returned = std::chrono::system_clock::now();
     child_exited = true;
 
+    if (crash_listener.joinable()) crash_listener.join();
     if (monitor.joinable()) monitor.join();
 
-    // Check final core details
     off_t final_core_size = 0;
-    std::chrono::system_clock::time_point core_mtime;
-    bool core_exists = check_core(child_pid, final_core_size, core_mtime);
+    std::string final_path;
+    bool core_exists = check_core_location(core_dir, child_pid, final_core_size, final_path);
 
-    // Calculate time differences
     double total_lifetime_sec = std::chrono::duration<double>(t_waitpid_returned - t_spawn).count();
-    double dump_duration_sec = 0.0;
-    if (core_detected) {
-        dump_duration_sec = std::chrono::duration<double>(t_waitpid_returned - t_core_first_seen).count();
-    }
+    double dump_duration_sec = crash_occurred ? std::chrono::duration<double>(t_waitpid_returned - t_crash_exact).count() : 0.0;
 
     std::string child_sig = WIFSIGNALED(status) ? ("SIG " + std::to_string(WTERMSIG(status)) + " (" + strsignal(WTERMSIG(status)) + ")") : "Exited normally";
     std::string wcore_str = (WIFSIGNALED(status) && WCOREDUMP(status)) ? "YES (WCOREDUMP=true)" : "NO";
 
-    // Build the formatted table
     std::ostringstream out;
     out << "\n"
         << "+=========================================================================================+\n"
-        << "|                             PROCESS LIFECYCLE SUMMARY TABLE                             |\n"
+        << "|                   PROCESS LIFECYCLE SUMMARY TABLE [TARGET: " << std::left << std::setw(5) << mode << "]                   |\n"
         << "+=========================================================================================+\n"
         << "| Metric / Event                       | Timestamp / Value                                |\n"
         << "+--------------------------------------+--------------------------------------------------+\n"
-        << "| 1. Child Process Spawned             | " << std::left << std::setw(48) << (get_timestamp(t_spawn) + " (PID: " + std::to_string(child_pid) + ")") << " |\n"
-        << "| 2. Crash Occurred (Core Started)     | " << std::left << std::setw(48) << (core_detected ? (get_timestamp(t_core_first_seen) + " (First size: " + std::to_string(first_seen_size / (1024*1024)) + " MB)") : "N/A (No core)") << " |\n"
-        << "| 3. Watcher Notified of Death         | " << std::left << std::setw(48) << (get_timestamp(t_waitpid_returned) + " (via waitpid)") << " |\n"
+        << "| 1. Target Storage Medium             | " << std::left << std::setw(48) << (mode == "ram" ? "RAM (/dev/shm tmpfs)" : "DISK (/tmp physical storage)") << " |\n"
+        << "| 2. Child Process Spawned             | " << std::left << std::setw(48) << (get_timestamp(t_spawn) + " (PID: " + std::to_string(child_pid) + ")") << " |\n"
+        << "| 3. Crash Occurred (Exact Trigger)    | " << std::left << std::setw(48) << (crash_occurred ? get_timestamp(t_crash_exact) : "N/A") << " |\n"
+        << "| 4. Watcher Notified of Death         | " << std::left << std::setw(48) << (get_timestamp(t_waitpid_returned) + " (via waitpid)") << " |\n"
         << "+--------------------------------------+--------------------------------------------------+\n"
-        << "| 4. Time Spent Dumping Core to Disk   | " << std::left << std::setw(48) << (core_detected ? (std::to_string(dump_duration_sec).substr(0,6) + " seconds (Lag/Delay)") : "0.000 seconds") << " |\n"
-        << "| 5. Total Process Lifetime            | " << std::left << std::setw(48) << (std::to_string(total_lifetime_sec).substr(0,6) + " seconds") << " |\n"
+        << "| 5. Time Spent Dumping Core           | " << std::left << std::setw(48) << (std::to_string(dump_duration_sec).substr(0,6) + " seconds (Exact Lag)") << " |\n"
+        << "| 6. Total Process Lifetime            | " << std::left << std::setw(48) << (std::to_string(total_lifetime_sec).substr(0,6) + " seconds") << " |\n"
         << "+--------------------------------------+--------------------------------------------------+\n"
-        << "| 6. Termination Signal                | " << std::left << std::setw(48) << child_sig << " |\n"
-        << "| 7. Kernel Core Dump Flag             | " << std::left << std::setw(48) << wcore_str << " |\n"
-        << "| 8. Final Core File Path              | " << std::left << std::setw(48) << ("/tmp/core.huge_crasher." + std::to_string(child_pid)) << " |\n"
-        << "| 9. Final Core File Size              | " << std::left << std::setw(48) << (core_exists ? (std::to_string(final_core_size / (1024*1024)) + " MB (" + std::to_string(final_core_size) + " bytes)") : "0 MB") << " |\n"
+        << "| 7. Termination Signal                | " << std::left << std::setw(48) << child_sig << " |\n"
+        << "| 8. Kernel Core Dump Flag             | " << std::left << std::setw(48) << wcore_str << " |\n"
+        << "| 9. Core File Location                | " << std::left << std::setw(48) << (core_exists ? final_path : "None") << " |\n"
+        << "| 10. Core File Size                   | " << std::left << std::setw(48) << (core_exists ? (std::to_string(final_core_size / (1024*1024)) + " MB (" + std::to_string(final_core_size) + " bytes)") : "0 MB") << " |\n"
         << "+=========================================================================================+\n";
 
     log_msg(watcher_log, out.str());
@@ -184,7 +202,5 @@ int main() {
     while (keep_running) {
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
-
-    log_msg(watcher_log, "[WATCHER] Received Ctrl+C / SIGINT. Exiting watcher now. Goodbye!");
     return 0;
 }

@@ -30,13 +30,22 @@ void log_msg(std::ofstream& log_file, const std::string& msg) {
     }
 }
 
-// 2 GB allocation
-const size_t ALLOC_SIZE = 2ULL * 1024ULL * 1024ULL * 1024ULL;
+int main(int argc, char* argv[]) {
+    // Parse memory size in GB from argument (e.g., 1 = 1 GB, 0.5 = 500 MB, 0.2 = 200 MB)
+    double mem_gb = 0.2;
+    if (argc > 1) {
+        try {
+            mem_gb = std::stod(argv[1]);
+        } catch (...) {
+            mem_gb = 0.2;
+        }
+    }
 
-int main() {
+    size_t alloc_bytes = static_cast<size_t>(mem_gb * 1024ULL * 1024ULL * 1024ULL);
+
     std::ofstream log_file("crasher.log", std::ios::out | std::ios::trunc);
 
-    // Tell Linux kernel to dump all memory mappings (anonymous, file, shared)
+    // Tell Linux kernel to dump all memory mappings
     FILE* fp = fopen("/proc/self/coredump_filter", "w");
     if (fp) {
         fprintf(fp, "0x3f\n");
@@ -44,13 +53,14 @@ int main() {
     }
 
     log_msg(log_file, "Process started (PID: " + std::to_string(getpid()) + ")");
-    log_msg(log_file, "Allocating 2 GB of dirty RAM...");
+    log_msg(log_file, "Allocating " + std::to_string(mem_gb).substr(0,4) + " GB (" + 
+                      std::to_string(alloc_bytes / (1024 * 1024)) + " MB) of dirty RAM...");
 
     char* buffer = nullptr;
     try {
-        buffer = new char[ALLOC_SIZE];
+        buffer = new char[alloc_bytes];
         // Populate pages so they are non-zero and physically backed in RAM
-        for (size_t i = 0; i < ALLOC_SIZE; i += 4096) {
+        for (size_t i = 0; i < alloc_bytes; i += 4096) {
             buffer[i] = (char)(i & 0xFF);
             buffer[i + 1] = 0x55;
         }
@@ -59,7 +69,7 @@ int main() {
         return 1;
     }
 
-    log_msg(log_file, "Memory populated successfully in RAM!");
+    log_msg(log_file, "Memory populated successfully (" + std::to_string(alloc_bytes / (1024 * 1024)) + " MB)!");
 
     // Random crash time between 5 and 60 seconds
     std::random_device rd;
@@ -96,6 +106,11 @@ int main() {
     }
 
     log_msg(log_file, ">>> TIME REACHED (" + std::to_string(target_second) + "s)! Dereferencing nullptr NOW! <<<");
+
+    // Signal parent watcher via pipe descriptor 3 that crash is happening RIGHT NOW
+    char crash_byte = 'X';
+    write(3, &crash_byte, 1);
+    close(3);
 
     // Null pointer dereference
     volatile int* ptr = nullptr;

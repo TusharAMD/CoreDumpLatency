@@ -1,180 +1,195 @@
-[21:58:14.578] ==========================================================================
-[21:58:14.578] [WATCHER] Starting watcher process (PID: 1683)
-[21:58:14.579] [WATCHER] Ensures RLIMIT_CORE = unlimited automatically.
-[21:58:14.580] ==========================================================================
-[21:58:14.580] [WATCHER] Spawned child crasher PID: 1684
-[21:58:14.581] [WATCHER] Calling waitpid(1684)... (blocked)
-[21:58:14.581] [WATCHER] Calling waitpid(1684)... (blocked)
-[21:58:14.582] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Not created yet
-[21:58:15.083] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:15.584] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:16.086] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:16.587] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:17.088] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:17.589] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:18.091] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:18.592] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:19.093] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:19.594] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:20.095] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:20.596] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:21.097] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:21.598] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:22.100] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:22.601] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:23.102] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:23.603] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:24.104] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:24.605] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:25.106] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:25.607] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:26.108] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:26.609] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:27.111] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:27.613] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:28.115] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:28.617] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:29.118] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:29.619] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:30.120] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:30.621] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:31.122] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:31.624] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:32.125] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:32.626] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:33.127] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:33.629] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:34.130] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:34.631] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:35.132] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:35.633] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:36.134] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:36.636] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:37.137] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:37.638] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:38.139] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:38.640] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:39.141] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:39.642] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:40.143] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:40.644] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:41.146] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:41.647] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:42.148] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:42.649] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:43.150] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:43.652] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:44.153] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:44.654] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:45.155] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:45.656] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:46.157] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:46.659] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:47.160] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:47.661] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:48.162] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:48.663] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:49.164] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:49.665] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:50.166] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:50.667] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:51.168] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:51.670] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:52.171] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:52.672] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:53.173] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:53.674] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:54.175] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:54.676] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:55.177] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:55.678] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:56.180] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:56.681] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:57.182] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:57.683] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:58.184] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:58.685] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:59.187] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:58:59.688] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:59:00.189] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:59:00.690] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:59:01.191] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:59:01.692] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:59:02.193] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:59:02.695] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:59:03.196] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:59:03.697] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:59:04.198] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:59:04.699] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:59:05.200] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:59:05.701] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:59:06.202] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:59:06.703] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:59:07.205] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:59:07.706] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:59:08.207] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:59:08.708] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:59:09.209] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:59:09.710] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:59:10.212] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:59:10.713] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:59:11.214] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:59:11.715] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:59:12.216] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Not created yet
-[21:59:12.717] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Found (187 MB)
-[21:59:13.218] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Found (385 MB)
-[21:59:13.720] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (462 MB)
-[21:59:14.221] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (502 MB)
-[21:59:14.724] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Found (542 MB)
-[21:59:15.226] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (580 MB)
-[21:59:15.729] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (625 MB)
-[21:59:16.231] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (672 MB)
-[21:59:16.732] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (758 MB)
-[21:59:17.233] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (790 MB)
-[21:59:17.735] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (821 MB)
-[21:59:18.236] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Found (839 MB)
-[21:59:18.738] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (908 MB)
-[21:59:19.240] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (990 MB)
-[21:59:19.742] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (1045 MB)
-[21:59:20.244] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Found (1076 MB)
-[21:59:20.746] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (1099 MB)
-[21:59:21.247] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (1134 MB)
-[21:59:21.748] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (1215 MB)
-[21:59:22.250] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (1308 MB)
-[21:59:22.752] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (1356 MB)
-[21:59:23.253] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (1440 MB)
-[21:59:23.755] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (1486 MB)
-[21:59:24.256] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Found (1512 MB)
-[21:59:24.758] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (1558 MB)
-[21:59:25.266] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (1654 MB)
-[21:59:25.767] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (1747 MB)
-[21:59:26.269] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Found (1799 MB)
-[21:59:26.770] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (1832 MB)
-[21:59:27.272] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (1853 MB)
-[21:59:27.773] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (1907 MB)
-[21:59:28.274] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (2002 MB)
-[21:59:28.776] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Found (2048 MB)
-[21:59:29.277] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Found (2049 MB)
-[21:59:29.961] [MONITOR] PID 1684 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Found (2050 MB)
-[21:59:30.462] [MONITOR] PID 1684 State: R (R: Running / CPU work or Kernel dumping memory) | Core: Found (2053 MB)
-[21:59:30.963] 
+[23:03:19.907] ==========================================================================
+[23:03:19.908] [WATCHER] Mode: ram | Target Memory: 1 GB | Core Dir: /dev/shm
+[23:03:19.908] ==========================================================================
+[23:03:19.909] [WATCHER] Spawned child crasher PID: 2177
+[23:03:19.910] [WATCHER] Calling waitpid(2177)... (blocked)
+[23:03:19.910] [WATCHER] Calling waitpid(2177)... (blocked)
+[23:03:19.910] [MONITOR] PID 2177 State: D (D: Disk I/O Uninterruptible Sleep) | Core: Not created yet
+[23:03:20.111] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:20.313] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:20.514] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:20.715] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:20.916] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:21.118] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:21.319] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:21.520] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:21.721] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:21.922] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:22.124] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:22.325] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:22.526] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:22.727] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:22.928] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:23.129] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:23.330] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:23.532] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:23.733] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:23.934] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:24.135] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:24.336] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:24.537] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:24.738] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:24.939] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:25.141] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:25.342] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:25.543] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:25.744] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:25.945] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:26.146] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:26.347] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:26.549] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:26.750] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:26.951] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:27.152] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:27.353] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:27.554] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:27.755] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:27.957] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:28.158] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:28.359] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:28.561] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:28.762] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:28.963] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:29.164] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:29.365] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:29.567] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:29.768] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:29.969] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:30.170] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:30.371] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:30.572] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:30.773] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:30.975] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:31.176] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:31.377] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:31.578] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:31.779] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:31.980] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:32.181] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:32.382] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:32.583] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:32.785] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:32.986] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:33.187] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:33.388] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:33.589] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:33.790] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:33.991] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:34.192] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:34.393] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:34.594] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:34.795] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:34.997] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:35.198] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:35.399] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:35.600] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:35.801] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:36.003] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:36.204] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:36.405] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:36.606] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:36.807] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:37.008] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:37.210] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:37.411] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:37.612] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:37.813] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:38.014] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:38.216] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:38.417] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:38.618] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:38.819] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:39.020] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:39.221] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:39.423] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:39.624] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:39.825] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:40.026] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:40.227] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:40.428] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:40.629] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:40.830] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:41.031] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:41.233] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:41.434] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:41.635] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:41.836] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:42.037] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:42.238] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:42.440] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:42.641] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:42.842] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:43.043] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:43.244] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:43.445] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:43.646] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:43.847] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:44.049] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:44.250] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:44.452] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:44.653] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:44.854] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:45.056] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:45.257] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:45.458] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:45.659] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:45.860] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:46.061] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:46.262] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:46.464] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:46.665] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:46.866] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:47.067] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:47.268] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:47.469] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:47.693] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:47.894] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:48.095] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:48.296] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:48.498] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:48.699] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:48.901] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:49.102] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:49.303] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:49.504] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:49.705] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:49.906] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:50.108] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:50.309] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:50.510] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:50.711] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:50.912] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:51.113] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:51.314] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:51.515] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:51.716] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:51.918] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:52.119] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:52.320] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:52.521] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Not created yet
+[23:03:52.722] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Found (94 MB)
+[23:03:52.923] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Found (304 MB)
+[23:03:53.125] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Found (510 MB)
+[23:03:53.326] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Found (718 MB)
+[23:03:53.527] [MONITOR] PID 2177 State: R (R: Running / CPU work or Memory write) | Core: Found (917 MB)
+[23:03:53.728] 
 +=========================================================================================+
-|                             PROCESS LIFECYCLE SUMMARY TABLE                             |
+|                   PROCESS LIFECYCLE SUMMARY TABLE [TARGET: ram  ]                   |
 +=========================================================================================+
 | Metric / Event                       | Timestamp / Value                                |
 +--------------------------------------+--------------------------------------------------+
-| 1. Child Process Spawned             | 21:58:14.581 (PID: 1684)                         |
-| 2. Crash Occurred (Core Started)     | 21:59:12.717 (First size: 187 MB)                |
-| 3. Watcher Notified of Death         | 21:59:30.676 (via waitpid)                       |
+| 1. Target Storage Medium             | RAM (/dev/shm tmpfs)                             |
+| 2. Child Process Spawned             | 23:03:19.910 (PID: 2177)                         |
+| 3. Crash Occurred (Exact Trigger)    | 23:03:52.625                                     |
+| 4. Watcher Notified of Death         | 23:03:53.702 (via waitpid)                       |
 +--------------------------------------+--------------------------------------------------+
-| 4. Time Spent Dumping Core to Disk   | 17.958 seconds (Lag/Delay)                       |
-| 5. Total Process Lifetime            | 76.094 seconds                                   |
+| 5. Time Spent Dumping Core           | 1.0771 seconds (Exact Lag)                       |
+| 6. Total Process Lifetime            | 33.792 seconds                                   |
 +--------------------------------------+--------------------------------------------------+
-| 6. Termination Signal                | SIG 11 (Segmentation fault)                      |
-| 7. Kernel Core Dump Flag             | YES (WCOREDUMP=true)                             |
-| 8. Final Core File Path              | /tmp/core.huge_crasher.1684                      |
-| 9. Final Core File Size              | 2053 MB (2153529344 bytes)                       |
+| 7. Termination Signal                | SIG 11 (Segmentation fault)                      |
+| 8. Kernel Core Dump Flag             | YES (WCOREDUMP=true)                             |
+| 9. Core File Location                | /dev/shm/core.huge_crasher.2177                  |
+| 10. Core File Size                   | 1029 MB (1079787520 bytes)                       |
 +=========================================================================================+
 
-[21:59:30.965] [WATCHER] Watcher is idle and staying alive as requested. Press Ctrl+C to exit.
-[22:05:09.084] [WATCHER] Received Ctrl+C / SIGINT. Exiting watcher now. Goodbye!
+[23:03:53.731] [WATCHER] Watcher is idle and staying alive as requested. Press Ctrl+C to exit.
